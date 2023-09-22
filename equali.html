@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Study with me</title>
+    <link rel="stylesheet" href="rijan.css">
+    <link rel="shortcut icon" href="1d5b20f6-dc3b-4e32-94cb-70d84c7b9204.jpg" type="image">
+</head>
+<body>
+  
+<!-- youtube link -->
+    <form id="videoForm">
+      <input type="text" id="youtubeLink" placeholder="Enter a YouTube Video Link" required>
+      <button type="submit" id="embed"><img src="right-to-bracket-solid.svg" alt="sorry"></button>
+    </form>
+
+    <div id="embeddedVideo"></div>
+
+  
+
+<!-- timer button -->
+<button id="timerButton"  data-state="visible" onclick="timer1visibility()"><img src="minus-solid.svg" alt="timer"></button>
+    <!-- timer -->
+    <div class="timer" id="timer1">
+    <div id="timer">
+        <div id="timer-label">Focus</div>
+        <div id="time-left">25:00</div>
+      </div>
+      <div id="controls">
+        <button id="start-stop"><div>start</div></button>
+        <button id="reset"><div>Reset</div></button>
+      </div>
+      <button id="editButton" data-state="hidden" onclick="editButtonvisibility()"><img src="minus-solid.svg"></button>
+        <div id="settings">
+        <div id="focus-settings" style="display: none;">
+          <label for="focus-duration">Focus Duration</label>
+          <input type="number" id="focus-duration" min="1" value="50">
+        </div>
+        <div id="break-settings" style="display: none;">
+          <label for="break-duration" >Break Duration</label>
+          <input type="number" id="break-duration" min="1" value="10">
+        </div>
+      </div>
+    </div>
+      
+    <!-- music button -->
+    <button id="musicButton" onclick="togglePlayerVisibility()"><img src="music-solid.svg" alt=""></button>
+
+
+    <div id="musicPlayerContainer">
+        <div class="audio">
+            <audio id="music1" src="kaha.m4a"></audio>
+            <audio id="music2" src="[Study Sleep Relax  ] Meditation - Monoman .beautiful commen.m4a"volume="0"></audio>
+            <audio id="music3" src="05-5th shot.mp3" volume="0"></audio>
+            <audio id="music4" src="1Lofi.mp3" volume="0"></audio>
+            <audio id="music5" src="2Nature.mp3" volume="0"></audio>
+            <audio id="music6" src="4Fire.mp3" volume="0"></audio>
+            <audio id="music7" src="5Library.mp3" volume="0"></audio>
+            <audio id="music8" src="6piano.mp3" volume="0"></audio>
+            <audio id="music9" src="8Studioghibli.mp3" volume="0"></audio>
+            <audio id="music10" src="rain-01.mp3" volume="0"></audio>
+            <!-- Add more audio elements as needed -->
+        </div>
+
+<!-- main body of music player -->
+        <div class="main_body">
+            <button id="playPauseButton" onclick="togglePlayPause()">&#9616</button>
+            <p>Jauu kaha</p>
+            <input type="range" id="player" min="0" max="1" step="0.01" onchange="setVolume('music1', this.value)" <i>
+            <p>Puung</p>
+            <input type="range" min="0" max="1" step="0.01" onchange="setVolume('music2', this.value)">
+            <p>Guitar</p>
+            <input type="range" min="0" max="1" step="0.01" onchange="setVolume('music3', this.value)">
+            <p>Lofi</p>
+            <input type="range" min="0" max="1" step="0.01" onchange="setVolume('music4', this.value)">
+            <p>Nature</p>
+            <input type="range" min="0" max="1" step="0.01" onchange="setVolume('music5', this.value)">
+            <p>Fire</p>
+            <input type="range" min="0" max="1" step="0.01" onchange="setVolume('music6', this.value)">
+            <p>Library</p>
+            <input type="range" min="0" max="1" step="0.01" onchange="setVolume('music7', this.value)">
+            <p>Piano</p>
+            <input type="range" min="0" max="1" step="0.01" onchange="setVolume('music8', this.value)">
+            <p>Studio Ghibli</p>
+            <input type="range" min="0" max="1" step="0.01" onchange="setVolume('music9', this.value)">
+            <p>Rain</p>
+            <input type="range" min="0" max="1" step="0.01" onchange="setVolume('music10', this.value)">
+
+            
+            <!-- Add more volume controls for additional tracks -->
+        </div>
+    </div>
+
+    <script src="equali.js"></script>
+</body>
